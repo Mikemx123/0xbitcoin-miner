@@ -316,7 +316,7 @@ module.exports =  {
         }
 
         self.mining = true;
-        console.log('MINING:',self.mining)
+
        CPUMiner.stop();
         CPUMiner.run( (err, sol) => {
             if (sol) {
@@ -331,7 +331,7 @@ module.exports =  {
             }
           //  console.log("Stopping mining operations until the next block...");
           self.mining = false;
-          console.log('MINING:',self.mining)
+
         });
     },
 
@@ -345,7 +345,6 @@ module.exports =  {
     {
 
       var hashes = CPUMiner.hashes();
-      console.log('hashes:', hashes )
         console.log('Hash rate: ' + parseInt( hashes / PRINT_STATS_TIMEOUT) + " kH/s");
     }
 
